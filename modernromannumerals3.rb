@@ -1,7 +1,7 @@
-  final = []
-
 def romanize number
-  
+
+final = ''
+
  digits = [[number % 10000 / 1000, 'M', nil, nil],
             [number % 1000 / 100, 'C', 'D', 'M'],
             [number % 100 / 10, 'X', 'L', 'C'],
@@ -19,7 +19,7 @@ def romanize number
    elsif digit <= 3
     digit_romanized = r1 * digit
   end
- final.push digit_romanized
+ final += digit_romanized
  end
  
  puts final
